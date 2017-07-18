@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import Nav from './Nav.jsx';
 import Images from './Images.jsx';
 import StoryLine from './StoryLine.jsx';
-//sadhkajhdjas
+//test
 class App extends React.Component {
   constructor (props) {
     super(props);
