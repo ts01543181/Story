@@ -1,0 +1,82 @@
+#body {
+  background-color: black;
+}
+
+#theI {
+  color: #00bfff;
+  font-size: 100px;
+  margin-right: 10px;
+}
+
+.logo {
+  float: right;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.header {
+  font-weight: 900;
+  font-family: 'Architects Daughter';
+  font-size: 75px;
+  margin-top: -10px;
+  margin-left: 3%;
+  margin-right: 10px;
+  color: Ivory;
+  max-width: 250px;
+}
+
+.searchBar {
+  float: right;
+  margin-right: 3%;
+  margin-top: -140;
+}
+
+.searchButton {
+  margin-left: 50px;
+  font-family: 'Architects Daughter';
+  font-size: 30px;
+}
+
+input {
+  height: 40px;
+  width: 300px;
+}
+
+.search {
+  font-size: 20px;
+}
+
+.storyLine {
+  margin-top: -50px;
+  height: 450px;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.storyLineEntry {
+  display: inline-block;
+  margin: 40px 40px 40px 40px;
+  vertical-align: middle;
+}
+
+.allImages {
+  margin-top: 3%;
+  margin-left: 13%;
+  margin-right: 13%;
+  background-color: grey;
+}
+
+.imageEntryBlock {
+  background-color: grey;
+  border-style: solid;
+  float: left;
+}
+
+.eachImage {
+  height: 200px;
+  width: 200px;
+  margin: 40px 40px 40px 40px;
+  border-style: groove;
+  border-color: gray;
+}

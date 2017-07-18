@@ -1,0 +1,16 @@
+import React from 'react';
+import {render} from 'react-dom';
+import ImageEntry from './ImageEntry.jsx';
+
+var Images = (props) => {
+  console.log(props)
+
+  return (
+    <div className="allImages">
+      {props.images.map(image =>
+        <ImageEntry image={ image } selectImageFunc={props.selectImageFunc}/>
+      )}
+    </div>
+)};
+
+export default Images;
