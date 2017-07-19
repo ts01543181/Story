@@ -1,5 +1,5 @@
 #body {
-  background-color: black;
+  background-color: #2b2a2a;
 }
 
 #theI {
@@ -54,7 +54,6 @@ input {
 
 .storyLine {
   margin-top: -60px;
-  height: 450px;
   width: 100%;
   overflow-x: auto;
   white-space: nowrap;
@@ -64,6 +63,7 @@ input {
   display: inline-block;
   margin: 40px 40px 40px 40px;
   vertical-align: middle;
+  box-shadow: 20px 20px 20px black ;
 }
 
 .modal {
@@ -73,13 +73,18 @@ input {
   position: relative;
   background-color: grey; 
   border-style: solid;
-  border-radius:15px;
+  border-radius:7.5px;
+}
+
+.enlargeImageModalSource {
+  box-shadow: 20px 20px 20px black ;
 }
 
 .allImages {
+  width: auto;
+  margin-right: 18%;
+  margin-left: 18%;
   margin-top: 3%;
-  margin-left: 13%;
-  margin-right: 13%;
   background-color: grey;
 }
 

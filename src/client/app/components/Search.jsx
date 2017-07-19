@@ -7,7 +7,7 @@ var Search = (props) => {
   let triggerSearch = function() {
     let options = {};
     options.query = $(".search").val();
-    options.max = 48;
+    options.max = 30;
     options.key = window.SHUTTERSHOCK_API;
     searchShutterShock(options, function(data) {
       props.searchFunc(data);

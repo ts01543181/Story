@@ -6,7 +6,7 @@ var StoryLine = (props) => {
  
 
   return (
-    <div>
+    <div className="modalContainer">
        <div className="modal fade" id="enlargeImageModal" tabIndex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
           <p className="initialText">Write your story.<br/><br/>
           Search for images! <br/>
@@ -25,7 +25,7 @@ var StoryLine = (props) => {
       <div className="container">
       <h1></h1>
       <div className="jumbotron"><h2></h2></div>
-          <p>Click the below images to enlarge them</p>
+          <p><br/></p>
           <div className="storyLine">
             {props.storyLine.map(imageUrl =>
               <StoryLineEntry storyLineImage={imageUrl} deleteImage={props.deleteImage}/>

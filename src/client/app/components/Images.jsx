@@ -6,10 +6,12 @@ var Images = (props) => {
   console.log(props)
 
   return (
-    <div className="allImages">
-      {props.images.map(image =>
-        <ImageEntry image={ image } selectImageFunc={props.selectImageFunc}/>
-      )}
+    <div className="allImagesContainer">
+      <div className="allImages">
+        {props.images.map(image =>
+          <ImageEntry image={ image } selectImageFunc={props.selectImageFunc}/>
+        )}
+      </div>
     </div>
 )};
 
