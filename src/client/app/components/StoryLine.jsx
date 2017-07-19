@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import StoryLineEntry from './StoryLineEntry.jsx';
 
 var StoryLine = (props) => {
- 
+
 
   return (
     <div className="modalContainer">
@@ -24,13 +24,13 @@ var StoryLine = (props) => {
       </div>
       <div className="container">
       <h1></h1>
-      <div className="jumbotron"><h2></h2></div>
+      <div className="jumbotron"></div>
           <p><br/></p>
           <div className="storyLine">
             {props.storyLine.map(imageUrl =>
               <StoryLineEntry storyLineImage={imageUrl} deleteImage={props.deleteImage}/>
             )}
-          </div>   
+          </div>
       </div>
     </div>
   )

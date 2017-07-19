@@ -18,8 +18,10 @@ var StoryLineEntry = (props) => {
 
   return (
     <div className="storyLineEntry">
-      <img src={props.storyLineImage}/> 
-      <button onClick={removeImage}>x</button>
+      <button className="removePic" onClick={removeImage}>x</button>
+      <div>
+        <img src={props.storyLineImage}/>
+      </div>
     </div>
   )
 };
