@@ -4,17 +4,25 @@ import $ from 'jquery';
 
 var StoryLineEntry = (props) => {
 
-  var deleteAll = () => {
-    $('.storyLineEntry').hide({opacity: 0.2}, 450)
+  var removeImage = () => {
+    props.deleteImage(props.storyLineImage);
   }
+
+  $(function() {
+      $('img').on('click', function() {
+        $('.initialText').hide();
+        $('.hidden').show();
+        $('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+        $('#enlargeImageModal').modal('show');
+      });
+  });
 
   return (
     <div className="storyLineEntry">
-      <img src={props.storyLineImage}/>
-      <button onClick={deleteAll}>x</button>
+      <img src={props.storyLineImage}/> 
+      <button onClick={removeImage}>x</button>
     </div>
   )
 };
 
-// CHANGE
 export default StoryLineEntry;

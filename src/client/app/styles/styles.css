@@ -28,13 +28,19 @@
 .searchBar {
   float: right;
   margin-right: 3%;
-  margin-top: -140;
+  margin-top: -140px;
 }
 
 .searchButton {
   margin-left: 50px;
   font-family: 'Architects Daughter';
   font-size: 30px;
+}
+
+.initialText {
+  margin-left: 50px;
+  font-family: 'Architects Daughter';
+  font-size: 50px;
 }
 
 input {
@@ -60,6 +66,16 @@ input {
   vertical-align: middle;
 }
 
+.modal {
+  text-align: center;
+  height: auto;
+  padding-top: 30px;
+  position: relative;
+  background-color: grey; 
+  border-style: solid;
+  border-radius:15px;
+}
+
 .allImages {
   margin-top: 3%;
   margin-left: 13%;
@@ -79,4 +95,15 @@ input {
   margin: 40px 40px 40px 40px;
   border-style: groove;
   border-color: gray;
+}
+
+.hidden {
+  display: none;
+  margin: 30px; 
+  font-family: 'Architects Daughter';
+  font-size: 20px;
+}
+
+.captionBox {
+  display: none;
 }
