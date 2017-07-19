@@ -28,11 +28,14 @@ class App extends React.Component {
     })
   }
 
-  // deleteImage() {
-  //   var newArr = this.state.storyLine.filter(function(storyImage) {
-  //     return;
-  //   });
-  // }
+  deleteImage(imageUrl) {
+    var newArr = this.state.storyLine.filter(function(storyImageUrl) {
+      return storyImageUrl !== imageUrl;
+    });
+    this.setState({
+      storyLine: newArr
+    })
+  }
 
   render () {
     return (
@@ -41,7 +44,7 @@ class App extends React.Component {
           <Nav searchFunc={this.searchedImages.bind(this)}/>
         </div>
         <div className="storyLineBlock">
-          <StoryLine storyLine={this.state.storyLine}/>
+          <StoryLine storyLine={this.state.storyLine} />
         </div>
         <div>
           <Images images={this.state.imageList} selectImageFunc={this.selectedImage.bind(this)}/>
