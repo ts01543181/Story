@@ -4,6 +4,12 @@ import $ from 'jquery';
 
 var StoryLineEntry = (props) => {
 
+<<<<<<< HEAD
+  return (
+    <div className="storyLineEntry">
+      <img src={props.storyLineImage}/>
+      <button>x</button>
+=======
   var removeImage = () => {
     props.deleteImage(props.storyLineImage);
   }
@@ -21,6 +27,7 @@ var StoryLineEntry = (props) => {
     <div className="storyLineEntry">
       <img src={props.storyLineImage}/> 
       <button onClick={removeImage}>x</button>
+>>>>>>> 820d643930cd76e905747ea095de2b34b8c0e340
     </div>
   )
 };
