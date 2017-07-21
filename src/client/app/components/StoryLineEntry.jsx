@@ -7,15 +7,6 @@ var StoryLineEntry = (props) => {
     props.deleteImage(props.storyLineImage);
   }
 
-  $(function() {
-      $('img').on('click', function() {
-        $('.initialText').hide();
-        $('.hidden').show();
-        $('.enlargeImageModalSource').attr('src', $(this).attr('src'));
-        $('#enlargeImageModal').modal('show');
-      });
-  });
-
   return (
     <div className="storyLineEntry">
       <button className="removePic" onClick={removeImage}>x</button>
