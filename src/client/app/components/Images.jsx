@@ -3,7 +3,6 @@ import {render} from 'react-dom';
 import ImageEntry from './ImageEntry.jsx';
 
 var Images = (props) => {
-  console.log(props)
 
   return (
     <div className="allImagesContainer">
