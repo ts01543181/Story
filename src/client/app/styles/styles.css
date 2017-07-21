@@ -47,6 +47,24 @@
   font-weight: 900;
 }
 
+.stage {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.stageImageCaption {
+  text-align: center;
+  font-family: 'Architects Daughter';
+  font-size: 30px;
+}
+
+.saveCaptionButton {
+  font-family: 'Architects Daughter';
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 50px;
+}
+
 input {
   height: 40px;
   width: 300px;
@@ -68,20 +86,6 @@ input {
   margin: 40px 40px 40px 40px;
   vertical-align: middle;
   box-shadow: 20px 20px 20px black ;
-}
-
-.modal {
-  text-align: center;
-  height: auto;
-  padding-top: 30px;
-  position: relative;
-  background-color: grey;
-  border-style: solid;
-  border-radius:7.5px;
-}
-
-.enlargeImageModalSource {
-  box-shadow: 20px 20px 20px black;
 }
 
 img {

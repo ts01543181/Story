@@ -28,17 +28,17 @@ class App extends React.Component {
       imageList: data.data
     });
   }
-  
+
   stageImage(imageUrl) {
     var desiredImageObj = this.state.storyLine.filter((imageObj) => {
       return imageUrl === imageObj.src;
     })
-    
+
     this.setState({
       stageImage: desiredImageObj[0]
     });
   }
-  
+
   saveImage(imageObj) {
     this.state.storyLine.forEach((img) => {
       if (imageObj.src === img.src) {
@@ -60,7 +60,7 @@ class App extends React.Component {
   }
 
   deleteImage(imageClicked) {
-    
+
     var remainingImages = this.state.storyLine.filter((storyImage) => {
       return storyImage.src !== imageClicked;
     });

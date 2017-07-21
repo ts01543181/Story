@@ -1,22 +1,38 @@
 import React from 'react';
 import {render} from 'react-dom';
 
-var Stage = (props) => {
-  
-  let getCaption = function() {
-    let caption = $('.stageImageCaption').val();
-    props.saveImage({src:props.stageImage.src, caption:caption})
+class Stage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: props.stageImage.caption,
+    };
   }
 
-  console.log('new prop stageImage', props.stageImage.caption)
+  getCaption() {
+    let caption = $('.stageImageCaption').val();
+    console.log(this.props.stageImage)
+    props.saveImage({src:this.props.stageImage.src, caption:caption})
+  }
 
-  return (
-    <div className="stage">
-      <img className="stageImage" src={props.stageImage.src}/>
-      <textarea col="50" row="2" className="stageImageCaption">{props.stageImage.caption}</textarea>
-      <button onClick={getCaption}>Save</button>
-    </div>
-  )
+  handleChange(event) {
+    this.setState({value: event.target.value});
+    this.getCaption();
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="stage">
+          <img className="stageImage" src={this.props.stageImage.src}/>
+        </div>
+        <div className="stageImageCaption">
+          <textarea className="stageImageCaption" value={this.state.value} onChange={this.handleChange.bind(this)}></textarea>
+          <button className="saveCaptionButton" onClick={this.getCaption}>Save</button>
+        </div>
+      </div>
+    )
+  }
 };
 
 export default Stage;
