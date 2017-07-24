@@ -4,6 +4,7 @@ import Nav from './Nav.jsx';
 import Images from './Images.jsx';
 import StoryLine from './StoryLine.jsx';
 import Stage from './Stage.jsx';
+import Search from './Search.jsx';
 
 class App extends React.Component {
   constructor (props) {
@@ -13,8 +14,8 @@ class App extends React.Component {
       imageList: window.exampleImages,
       storyLine: [],
       stageImage: {
-        src: 'http://www.offtheline.com.au/wp-content/uploads/Core-story.jpg',
-        caption: 'Write your story...'
+        src: 'http://bestanimations.com/Books/pretty-book-bench-nature-water-outdoors-animated-gif.gif',
+        caption: 'Write your story. . . Search for images below!'
       },
     }
     this.deleteImage = this.deleteImage.bind(this);
@@ -34,6 +35,8 @@ class App extends React.Component {
       return imageUrl === imageObj.src;
     })
 
+    console.log('THIS SHOULD BE THE IMAGE BEING STAGED', desiredImageObj[0])
+
     this.setState({
       stageImage: desiredImageObj[0]
     });
@@ -45,6 +48,7 @@ class App extends React.Component {
         img.caption = imageObj.caption
       }
     })
+    console.log('THIS IS THE UPDATED STORYLINE', this.state.storyLine)
   }
 
   selectedImage(imageUrl) {
@@ -52,7 +56,7 @@ class App extends React.Component {
     var newArr = this.state.storyLine;
     newArr.push({
       src: imageUrl,
-      caption: 'Write caption here...',
+      caption: 'Write your story here. . .',
     });
     this.setState({
       storyLine: newArr
@@ -80,7 +84,10 @@ class App extends React.Component {
           <Stage stageImage={this.state.stageImage} storyLine={this.state.storyLine} saveImage={this.saveImage}/>
         </div>
         <div className="storyLineBlock">
-          <StoryLine storyLine={this.state.storyLine} deleteImage={this.deleteImage} stageImage={this.stageImage}/>
+          <StoryLine storyLine={this.state.storyLine} deleteImage={this.deleteImage} stageImage={this.stageImage} saveImage={this.saveImage}/>
+        </div>
+        <div>
+          <Search searchFunc={this.searchedImages.bind(this)}/>
         </div>
         <div>
           <Images images={this.state.imageList} selectImageFunc={this.selectedImage.bind(this)}/>
