@@ -5,23 +5,29 @@ import Images from './Images.jsx';
 import StoryLine from './StoryLine.jsx';
 import Stage from './Stage.jsx';
 import Search from './Search.jsx';
+import StoriesPage from './StoriesPage.jsx';
 
 class App extends React.Component {
   constructor (props) {
     super(props);
 
     this.state = {
-      imageList: window.exampleImages,
+      imageList: window.imageList,
       storyLine: [],
       stageImage: {
         src: 'http://bestanimations.com/Books/pretty-book-bench-nature-water-outdoors-animated-gif.gif',
         caption: 'Write your story. . . Search for images below!'
       },
+      page: 'mainPage',
     }
     this.deleteImage = this.deleteImage.bind(this);
     this.selectedImage = this.selectedImage.bind(this);
     this.stageImage = this.stageImage.bind(this);
     this.saveImage = this.saveImage.bind(this);
+    this.goToMyStoriesPage = this.goToMyStoriesPage.bind(this);
+    this.goToMainPage = this.goToMainPage.bind(this);
+    this.searchedImages = this.searchedImages.bind(this);
+    this.selectedImage = this.selectedImage.bind(this);
   }
 
   searchedImages(data) {
@@ -34,8 +40,6 @@ class App extends React.Component {
     var desiredImageObj = this.state.storyLine.filter((imageObj) => {
       return imageUrl === imageObj.src;
     })
-
-    console.log('THIS SHOULD BE THE IMAGE BEING STAGED', desiredImageObj[0])
 
     this.setState({
       stageImage: desiredImageObj[0]
@@ -64,7 +68,6 @@ class App extends React.Component {
   }
 
   deleteImage(imageClicked) {
-
     var remainingImages = this.state.storyLine.filter((storyImage) => {
       return storyImage.src !== imageClicked;
     });
@@ -74,26 +77,50 @@ class App extends React.Component {
     })
   }
 
+  goToMyStoriesPage() {
+    this.setState({
+      page: 'storiesPage',
+    })
+  }
+
+  goToMainPage() {
+    this.setState({
+      page: 'mainPage',
+    })
+  }
+
   render () {
-    return (
-      <div>
+    if (this.state.page === 'mainPage') {
+
+      // This is the main page
+      return (
         <div>
-          <Nav searchFunc={this.searchedImages.bind(this)}/>
+          <div>
+            <Nav searchFunc={this.searchedImages} storyLine={this.state.storyLine} goToMyStoriesPage={this.goToMyStoriesPage}/>
+          </div>
+          <div>
+            <Stage stageImage={this.state.stageImage} storyLine={this.state.storyLine} saveImage={this.saveImage}/>
+          </div>
+          <div className="storyLineBlock">
+            <StoryLine storyLine={this.state.storyLine} deleteImage={this.deleteImage} stageImage={this.stageImage} saveImage={this.saveImage}/>
+          </div>
+          <div>
+            <Search searchFunc={this.searchedImages}/>
+          </div>
+          <div>
+            <Images images={this.state.imageList} selectImageFunc={this.selectedImage}/>
+          </div>
         </div>
+      )
+    } else if (this.state.page === 'storiesPage') {
+
+      // This is the stories page
+      return (
         <div>
-          <Stage stageImage={this.state.stageImage} storyLine={this.state.storyLine} saveImage={this.saveImage}/>
+          <StoriesPage goToMainPage={this.goToMainPage}/>
         </div>
-        <div className="storyLineBlock">
-          <StoryLine storyLine={this.state.storyLine} deleteImage={this.deleteImage} stageImage={this.stageImage} saveImage={this.saveImage}/>
-        </div>
-        <div>
-          <Search searchFunc={this.searchedImages.bind(this)}/>
-        </div>
-        <div>
-          <Images images={this.state.imageList} selectImageFunc={this.selectedImage.bind(this)}/>
-        </div>
-      </div>
-    )
+      )
+    }
   }
 }
 

@@ -31,7 +31,7 @@ class Stage extends React.Component {
         </div>
         <div className="stageImageCaptionSet">
           <textarea className="stageImageCaption" value={this.state.value} onChange={this.handleChange.bind(this)}></textarea>
-          <button className="saveCaptionButton" onClick={this.getCaption.bind(this)}>Save</button>
+          <button className="saveCaptionButton" onClick={this.getCaption.bind(this)}>Save Caption</button>
         </div>
       </div>
     )

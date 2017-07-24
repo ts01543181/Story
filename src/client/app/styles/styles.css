@@ -27,6 +27,42 @@
   max-width: 250px;
 }
 
+.saveThisStoryButton {
+  float: right;
+  margin-top: -100px;
+  margin-right: 290px;
+  font-family: 'Architects Daughter';
+  font-size: 25px;
+  font-weight: 900;
+  width: 400px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.mainPageButton {
+  float: right;
+  margin-top: -100px;
+  margin-right: 730px;
+  font-family: 'Architects Daughter';
+  font-size: 25px;
+  font-weight: 900;
+  width: 200px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.myStoriesButton {
+  float: right;
+  margin-top: -100px;
+  margin-right: 50px;
+  font-family: 'Architects Daughter';
+  font-size: 25px;
+  font-weight: 900;
+  width: 200px;
+  border-radius: 5px;
+  background-color: white;
+}
+
 .searchBar {
   text-align: center;
   margin-top: 50px;
@@ -63,6 +99,7 @@
 .stageImageCaption {
   font-family: 'Architects Daughter';
   font-size: 20px;
+  margin-left: 100px;
   width: 450px;
 }
 
@@ -98,6 +135,10 @@ input {
   box-shadow: 20px 20px 20px black;
 }
 
+.saveStoryButton {
+  text-align: center;
+}
+
 img {
   box-shadow: 20px 20px 20px black;
 }
@@ -130,13 +171,17 @@ img {
   margin-left: 96%;
 }
 
-.hidden {
-  display: none;
-  margin: 30px;
+.storiesList {
+  text-align: center;
   font-family: 'Architects Daughter';
-  font-size: 20px;
+  font-size: 30px;
+  color: white;
 }
 
-.captionBox {
-  display: none;
+.storiesListItem {
+  margin: 35px 35px 35px 35px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  width: 600px;
 }

@@ -3,7 +3,6 @@ import {render} from 'react-dom';
 import StoryLineEntry from './StoryLineEntry.jsx';
 
 var StoryLine = (props) => {
-  console.log(props.storyLine)
   return (
     <div className="storyLine">
       {props.storyLine.map(imageUrl =>

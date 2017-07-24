@@ -1,0 +1,3 @@
+window.imageList = [];
+
+window.storyData = [];

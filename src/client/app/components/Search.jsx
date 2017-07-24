@@ -6,13 +6,13 @@ var Search = (props) => {
   let triggerSearch = function() {
     let options = {};
     options.query = $(".search").val();
-    options.max = 30;
+    options.max = 32;
     options.key = window.SHUTTERSHOCK_API;
     searchShutterShock(options, function(data) {
       props.searchFunc(data);
     });
   }
-  
+
   let enterTriggerSearch = function(e) {
     if (e.key === 'Enter') {
       let options = {};
