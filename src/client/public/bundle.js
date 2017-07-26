@@ -9834,6 +9834,19 @@ function _defineProperty(obj, key, value) {
 
 var Search = function Search(props) {
 
+  var searchShutterShock = function searchShutterShock(options, callback) {
+    $.ajax({
+      url: 'https://api.shutterstock.com/v2/images/search?per_page=' + options.max + '&query=' + options.query + '&view=full',
+      headers: {
+        Authorization: 'Basic ' + window.SHUTTERSHOCK_API
+      }
+    }).done(function (data) {
+      callback(data);
+    }).fail(function (xhr, status, err) {
+      alert('Failed to retrieve ' + mediaType + ' search results:\n' + JSON.stringify(xhr.responseJSON, null, 2));
+    });
+  };
+
   var triggerSearch = function triggerSearch() {
     var options = {};
     options.query = $(".search").val();
@@ -33723,7 +33736,6 @@ var Stage = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Stage.__proto__ || Object.getPrototypeOf(Stage)).call(this));
 
-    console.log('SELECTED NEW IMAGE NOW AM CHANGING WHAT CAPTION IS', props.stageImage.caption);
     _this.state = {
       value: props.stageImage.caption
     };

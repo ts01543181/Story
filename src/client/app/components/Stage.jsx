@@ -4,7 +4,6 @@ import {render} from 'react-dom';
 class Stage extends React.Component {
   constructor(props) {
     super();
-    console.log('SELECTED NEW IMAGE NOW AM CHANGING WHAT CAPTION IS', props.stageImage.caption)
     this.state = {
       value: props.stageImage.caption,
     };
