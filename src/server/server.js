@@ -1,10 +1,14 @@
 let express = require('express')
-let app = express()
 let router = require('./router')
+let path = require('path')
 
 const PORT = process.env.PORT || 3000;
-// app.use(express.static(path.join(__dirname, '../client')));
-// // app.use('/', router)
+
+// let app = express()
+const app = express()
+  .use(express.static(path.join(__dirname, '../client')));
+
+// app.use('/', router)
 
 // app.get('*', function (req, res) {
 //   res.sendFile(path.join(__dirname, '../client/index.html'));
