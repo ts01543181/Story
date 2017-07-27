@@ -91,6 +91,10 @@ class App extends React.Component {
     this.setState({
       page: 'mainPage',
       storyLine: [],
+      stageImage: {
+        src: 'http://bestanimations.com/Books/pretty-book-bench-nature-water-outdoors-animated-gif.gif',
+        caption: 'Write your story. . . Search for images below!'
+      },
     })
   }
 

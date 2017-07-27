@@ -23954,7 +23954,11 @@ var App = function (_React$Component) {
     value: function goToMainPage() {
       this.setState({
         page: 'mainPage',
-        storyLine: []
+        storyLine: [],
+        stageImage: {
+          src: 'http://bestanimations.com/Books/pretty-book-bench-nature-water-outdoors-animated-gif.gif',
+          caption: 'Write your story. . . Search for images below!'
+        }
       });
     }
 
