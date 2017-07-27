@@ -23833,6 +23833,10 @@ var _StoriesPage = __webpack_require__(224);
 
 var _StoriesPage2 = _interopRequireDefault(_StoriesPage);
 
+var _PresentationPage = __webpack_require__(227);
+
+var _PresentationPage2 = _interopRequireDefault(_PresentationPage);
+
 var _axios = __webpack_require__(52);
 
 var _axios2 = _interopRequireDefault(_axios);
@@ -23886,6 +23890,7 @@ var App = function (_React$Component) {
     _this.searchedImages = _this.searchedImages.bind(_this);
     _this.selectedImage = _this.selectedImage.bind(_this);
     _this.fetchData = _this.fetchData.bind(_this);
+    _this.goToPresentationPage = _this.goToPresentationPage.bind(_this);
     return _this;
   }
 
@@ -23961,6 +23966,13 @@ var App = function (_React$Component) {
         }
       });
     }
+  }, {
+    key: 'goToPresentationPage',
+    value: function goToPresentationPage() {
+      this.setState({
+        page: 'presentationPage'
+      });
+    }
 
     // this is not in the right context because it is being invoked in the .then function
 
@@ -23987,7 +23999,11 @@ var App = function (_React$Component) {
       } else if (this.state.page === 'storiesPage') {
 
         // This is the stories page
-        return _react2.default.createElement('div', null, _react2.default.createElement(_StoriesPage2.default, { goToMainPage: this.goToMainPage, fetchData: this.fetchData, storyData: this.state.storyData, goToMyStoriesPage: this.goToMyStoriesPage }));
+        return _react2.default.createElement('div', null, _react2.default.createElement(_StoriesPage2.default, { goToMainPage: this.goToMainPage, fetchData: this.fetchData, storyData: this.state.storyData, goToMyStoriesPage: this.goToMyStoriesPage, goToPresentationPage: this.goToPresentationPage }));
+      } else if (this.state.page === 'presentationPage') {
+
+        // This is the presentation page
+        return _react2.default.createElement('div', null, _react2.default.createElement(_PresentationPage2.default, { goToMainPage: this.goToMainPage, fetchData: this.fetchData, goToMyStoriesPage: this.goToMyStoriesPage }));
       }
     }
   }]);
@@ -35427,7 +35443,7 @@ var StoriesPage = function (_React$Component) {
   _createClass(StoriesPage, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', null, _react2.default.createElement('div', { className: 'navBar' }, _react2.default.createElement('nav', null, _react2.default.createElement('h1', { className: 'header' }, _react2.default.createElement('span', { id: 'theI' }, 'S'), _react2.default.createElement('span', null, 'tory')), _react2.default.createElement('button', { className: 'saveThisStoryButton' }, ' Save This Story '), _react2.default.createElement('button', { className: 'mainPageButton', onClick: this.props.goToMainPage }, ' Main Page '), _react2.default.createElement('button', { className: 'myStoriesButton', onClick: this.props.fetchData }, ' My Stories '))), _react2.default.createElement('div', null, _react2.default.createElement(_StoriesList2.default, { storyData: this.props.storyData, goToMyStoriesPage: this.props.goToMyStoriesPage })));
+      return _react2.default.createElement('div', null, _react2.default.createElement('div', { className: 'navBar' }, _react2.default.createElement('nav', null, _react2.default.createElement('h1', { className: 'header' }, _react2.default.createElement('span', { id: 'theI' }, 'S'), _react2.default.createElement('span', null, 'tory')), _react2.default.createElement('button', { className: 'saveThisStoryButton' }, ' Save This Story '), _react2.default.createElement('button', { className: 'mainPageButton', onClick: this.props.goToMainPage }, ' Main Page '), _react2.default.createElement('button', { className: 'myStoriesButton', onClick: this.props.fetchData }, ' My Stories '))), _react2.default.createElement('div', null, _react2.default.createElement(_StoriesList2.default, { storyData: this.props.storyData, goToMyStoriesPage: this.props.goToMyStoriesPage, goToPresentationPage: this.props.goToPresentationPage })));
     }
   }]);
 
@@ -35464,7 +35480,7 @@ function _interopRequireDefault(obj) {
 var StoriesList = function StoriesList(props) {
 
   return _react2.default.createElement('div', { className: 'storiesList' }, props.storyData.map(function (storyObj) {
-    return _react2.default.createElement(_StoriesListEntry2.default, { storyObj: storyObj, goToMyStoriesPage: props.goToMyStoriesPage });
+    return _react2.default.createElement(_StoriesListEntry2.default, { storyObj: storyObj, goToMyStoriesPage: props.goToMyStoriesPage, goToPresentationPage: props.goToPresentationPage });
   }));
 };
 
@@ -35502,10 +35518,83 @@ var StoriesListEntry = function StoriesListEntry(props) {
     props.goToMyStoriesPage();
   };
 
-  return _react2.default.createElement('div', { className: 'storiesListEntry' }, _react2.default.createElement('div', { className: 'storiesListItem' }, _react2.default.createElement('a', { href: '#', className: 'storiesAnchorTag' }, props.storyObj.title)), _react2.default.createElement('button', { className: 'deleteStoriesButton', onClick: deleteStory }, 'Delete Story'));
+  return _react2.default.createElement('div', { className: 'storiesListEntry' }, _react2.default.createElement('div', { className: 'storiesListItem' }, _react2.default.createElement('a', { href: '#', className: 'storiesAnchorTag', onClick: props.goToPresentationPage }, props.storyObj.title)), _react2.default.createElement('button', { className: 'deleteStoriesButton', onClick: deleteStory }, 'Delete Story'));
 };
 
 exports.default = StoriesListEntry;
+
+/***/ }),
+/* 227 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+  };
+}();
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(9);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }return call && (typeof call === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var PresentationPage = function (_React$Component) {
+  _inherits(PresentationPage, _React$Component);
+
+  function PresentationPage(props) {
+    _classCallCheck(this, PresentationPage);
+
+    var _this = _possibleConstructorReturn(this, (PresentationPage.__proto__ || Object.getPrototypeOf(PresentationPage)).call(this, props));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(PresentationPage, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement('div', null, _react2.default.createElement('div', { className: 'navBar' }, _react2.default.createElement('nav', null, _react2.default.createElement('h1', { className: 'header' }, _react2.default.createElement('span', { id: 'theI' }, 'S'), _react2.default.createElement('span', null, 'tory')), _react2.default.createElement('button', { className: 'saveThisStoryButton' }, ' Save This Story '), _react2.default.createElement('button', { className: 'mainPageButton', onClick: this.props.goToMainPage }, ' Main Page '), _react2.default.createElement('button', { className: 'myStoriesButton', onClick: this.props.fetchData }, ' My Stories '))), _react2.default.createElement('div', null, 'PRESENT'));
+    }
+  }]);
+
+  return PresentationPage;
+}(_react2.default.Component);
+
+exports.default = PresentationPage;
 
 /***/ })
 /******/ ]);

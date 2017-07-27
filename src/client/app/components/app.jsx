@@ -6,6 +6,7 @@ import StoryLine from './StoryLine.jsx';
 import Stage from './Stage.jsx';
 import Search from './Search.jsx';
 import StoriesPage from './StoriesPage.jsx';
+import PresentationPage from './PresentationPage.jsx';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -31,6 +32,7 @@ class App extends React.Component {
     this.searchedImages = this.searchedImages.bind(this);
     this.selectedImage = this.selectedImage.bind(this);
     this.fetchData = this.fetchData.bind(this);
+    this.goToPresentationPage = this.goToPresentationPage.bind(this);
   }
 
   searchedImages(data) {
@@ -98,6 +100,12 @@ class App extends React.Component {
     })
   }
 
+  goToPresentationPage() {
+    this.setState({
+      page: 'presentationPage',
+    })
+  }
+
   // this is not in the right context because it is being invoked in the .then function
   fetchData() {
     axios.get('http://127.0.0.1:3000/getAllStories')
@@ -139,7 +147,15 @@ class App extends React.Component {
       // This is the stories page
       return (
         <div>
-          <StoriesPage goToMainPage={this.goToMainPage} fetchData={this.fetchData} storyData={this.state.storyData} goToMyStoriesPage={this.goToMyStoriesPage}/>
+          <StoriesPage goToMainPage={this.goToMainPage} fetchData={this.fetchData} storyData={this.state.storyData} goToMyStoriesPage={this.goToMyStoriesPage} goToPresentationPage={this.goToPresentationPage}/>
+        </div>
+      )
+    } else if (this.state.page === 'presentationPage') {
+
+      // This is the presentation page
+      return(
+        <div>
+          <PresentationPage goToMainPage={this.goToMainPage} fetchData={this.fetchData} goToMyStoriesPage={this.goToMyStoriesPage}/>
         </div>
       )
     }

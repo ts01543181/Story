@@ -1,15 +1,12 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Nav from './Nav.jsx';
-import StoriesList from './StoriesList.jsx';
-import axios from 'axios';
 
-class StoriesPage extends React.Component {
+class PresentationPage extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
 
-    };
+    }
   }
 
   render() {
@@ -24,11 +21,11 @@ class StoriesPage extends React.Component {
           </nav>
         </div>
         <div>
-          <StoriesList storyData={this.props.storyData} goToMyStoriesPage={this.props.goToMyStoriesPage} goToPresentationPage={this.props.goToPresentationPage}/>
+          PRESENT
         </div>
       </div>
     )
   }
 }
 
-export default StoriesPage;
+export default PresentationPage
