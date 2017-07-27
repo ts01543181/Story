@@ -401,7 +401,7 @@ module.exports = warning;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -784,7 +784,7 @@ module.exports = ExecutionEnvironment;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -1189,7 +1189,7 @@ module.exports = __webpack_require__(109);
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -1531,7 +1531,7 @@ module.exports = {
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 function makeEmptyFunction(arg) {
@@ -1573,7 +1573,7 @@ module.exports = emptyFunction;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -2698,7 +2698,7 @@ module.exports = ReactElement;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -2954,7 +2954,7 @@ module.exports = React;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -3828,7 +3828,7 @@ module.exports = ReactInstanceMap;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -3886,7 +3886,7 @@ module.exports = emptyObject;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -4145,7 +4145,7 @@ module.exports = EventPluginRegistry;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -5318,7 +5318,7 @@ module.exports = EventPluginUtils;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -5991,7 +5991,7 @@ module.exports = LinkedValueUtils;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -6042,7 +6042,7 @@ module.exports = ReactComponentEnvironment;
  * of patent rights can be found in the PATENTS file in the same directory.
  *
  * @typechecks
- *
+ * 
  */
 
 /*eslint-disable no-self-compare */
@@ -6161,7 +6161,7 @@ module.exports = shouldUpdateReactComponent;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -7253,7 +7253,7 @@ module.exports = ReactNoopUpdateQueue;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -7278,7 +7278,7 @@ module.exports = REACT_ELEMENT_TYPE;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -7657,7 +7657,7 @@ module.exports = ReactDOMComponentFlags;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -7721,7 +7721,7 @@ module.exports = accumulateInto;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -7795,7 +7795,7 @@ module.exports = getTextContentAccessor;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -7920,7 +7920,7 @@ module.exports = PooledClass.addPoolingTo(CallbackQueue);
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -8075,7 +8075,7 @@ module.exports = inputValueTracking;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -8650,7 +8650,7 @@ module.exports = DOMPropertyOperations;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -9013,7 +9013,7 @@ module.exports = instantiateReactComponent;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -10225,7 +10225,7 @@ var Nav = function Nav(props) {
     postThisStory(storyObj);
   };
 
-  return _react2.default.createElement('div', { className: 'navBar' }, _react2.default.createElement('nav', null, _react2.default.createElement('h1', { className: 'header' }, _react2.default.createElement('span', { id: 'theI' }, 'S'), _react2.default.createElement('span', null, 'tory')), _react2.default.createElement('button', { className: 'saveThisStoryButton', onClick: saveThisStory }, ' Save This Story '), _react2.default.createElement('button', { className: 'mainPageButton' }, ' Main Page '), _react2.default.createElement('button', { className: 'myStoriesButton', onClick: props.goToMyStoriesPage }, ' My Stories ')));
+  return _react2.default.createElement('div', { className: 'navBar' }, _react2.default.createElement('nav', null, _react2.default.createElement('h1', { className: 'header' }, _react2.default.createElement('span', { id: 'theI' }, 'S'), _react2.default.createElement('span', null, 'tory')), _react2.default.createElement('button', { className: 'saveThisStoryButton', onClick: saveThisStory }, ' Save This Story '), _react2.default.createElement('button', { className: 'mainPageButton', onClick: props.goToMainPage }, ' Main Page '), _react2.default.createElement('button', { className: 'myStoriesButton', onClick: props.goToMyStoriesPage }, ' My Stories ')));
 };
 
 exports.default = Nav;
@@ -10794,7 +10794,7 @@ module.exports = ReactChildren;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -11094,7 +11094,7 @@ module.exports = traverseAllChildren;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -11426,7 +11426,7 @@ module.exports = checkReactTypeSpec;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -11457,7 +11457,7 @@ module.exports = ReactPropTypeLocationNames;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -14239,7 +14239,7 @@ module.exports = ChangeEventPlugin;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -14333,7 +14333,7 @@ module.exports = ReactRef;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -14432,7 +14432,7 @@ module.exports = ReactOwner;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -14799,7 +14799,7 @@ module.exports = ReactDebugTool;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -14842,7 +14842,7 @@ module.exports = ReactInvalidSetStateWarningHook;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -17285,7 +17285,7 @@ module.exports = hyphenate;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  * @typechecks static-only
  */
 
@@ -19691,7 +19691,7 @@ module.exports = checkReactTypeSpec;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -19722,7 +19722,7 @@ module.exports = ReactPropTypeLocationNames;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -19748,7 +19748,7 @@ module.exports = getNextDebugID;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -19773,7 +19773,7 @@ module.exports = REACT_ELEMENT_TYPE;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -19819,7 +19819,7 @@ module.exports = getIteratorFn;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -19997,7 +19997,7 @@ module.exports = ReactServerRenderingTransaction;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -21315,7 +21315,7 @@ module.exports = getNodeForCharacterOffset;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 var isTextNode = __webpack_require__(170);
@@ -21918,7 +21918,7 @@ module.exports = SelectEventPlugin;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -22793,7 +22793,7 @@ module.exports = ReactMarkupChecksum;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -23953,7 +23953,8 @@ var App = function (_React$Component) {
     key: 'goToMainPage',
     value: function goToMainPage() {
       this.setState({
-        page: 'mainPage'
+        page: 'mainPage',
+        storyLine: []
       });
     }
 
@@ -23978,11 +23979,11 @@ var App = function (_React$Component) {
       if (this.state.page === 'mainPage') {
 
         // This is the main page
-        return _react2.default.createElement('div', null, _react2.default.createElement('div', null, _react2.default.createElement(_Nav2.default, { searchFunc: this.searchedImages, storyLine: this.state.storyLine, goToMyStoriesPage: this.goToMyStoriesPage, fetchData: this.fetchData })), _react2.default.createElement('div', null, _react2.default.createElement(_Stage2.default, { stageImage: this.state.stageImage, storyLine: this.state.storyLine, saveImage: this.saveImage })), _react2.default.createElement('div', { className: 'storyLineBlock' }, _react2.default.createElement(_StoryLine2.default, { storyLine: this.state.storyLine, deleteImage: this.deleteImage, stageImage: this.stageImage, saveImage: this.saveImage })), _react2.default.createElement('div', null, _react2.default.createElement(_Search2.default, { searchFunc: this.searchedImages })), _react2.default.createElement('div', null, _react2.default.createElement(_Images2.default, { images: this.state.imageList, selectImageFunc: this.selectedImage })));
+        return _react2.default.createElement('div', null, _react2.default.createElement('div', null, _react2.default.createElement(_Nav2.default, { searchFunc: this.searchedImages, storyLine: this.state.storyLine, goToMyStoriesPage: this.goToMyStoriesPage, fetchData: this.fetchData, goToMainPage: this.goToMainPage })), _react2.default.createElement('div', null, _react2.default.createElement(_Stage2.default, { stageImage: this.state.stageImage, storyLine: this.state.storyLine, saveImage: this.saveImage })), _react2.default.createElement('div', { className: 'storyLineBlock' }, _react2.default.createElement(_StoryLine2.default, { storyLine: this.state.storyLine, deleteImage: this.deleteImage, stageImage: this.stageImage, saveImage: this.saveImage })), _react2.default.createElement('div', null, _react2.default.createElement(_Search2.default, { searchFunc: this.searchedImages })), _react2.default.createElement('div', null, _react2.default.createElement(_Images2.default, { images: this.state.imageList, selectImageFunc: this.selectedImage })));
       } else if (this.state.page === 'storiesPage') {
 
         // This is the stories page
-        return _react2.default.createElement('div', null, _react2.default.createElement(_StoriesPage2.default, { goToMainPage: this.goToMainPage, fetchData: this.fetchData, storyData: this.state.storyData }));
+        return _react2.default.createElement('div', null, _react2.default.createElement(_StoriesPage2.default, { goToMainPage: this.goToMainPage, fetchData: this.fetchData, storyData: this.state.storyData, goToMyStoriesPage: this.goToMyStoriesPage }));
       }
     }
   }]);
@@ -35422,7 +35423,7 @@ var StoriesPage = function (_React$Component) {
   _createClass(StoriesPage, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', null, _react2.default.createElement('div', { className: 'navBar' }, _react2.default.createElement('nav', null, _react2.default.createElement('h1', { className: 'header' }, _react2.default.createElement('span', { id: 'theI' }, 'S'), _react2.default.createElement('span', null, 'tory')), _react2.default.createElement('button', { className: 'saveThisStoryButton' }, ' Save This Story '), _react2.default.createElement('button', { className: 'mainPageButton', onClick: this.props.goToMainPage }, ' Main Page '), _react2.default.createElement('button', { className: 'myStoriesButton', onClick: this.props.fetchData }, ' My Stories '))), _react2.default.createElement('div', null, _react2.default.createElement(_StoriesList2.default, { storyData: this.props.storyData })));
+      return _react2.default.createElement('div', null, _react2.default.createElement('div', { className: 'navBar' }, _react2.default.createElement('nav', null, _react2.default.createElement('h1', { className: 'header' }, _react2.default.createElement('span', { id: 'theI' }, 'S'), _react2.default.createElement('span', null, 'tory')), _react2.default.createElement('button', { className: 'saveThisStoryButton' }, ' Save This Story '), _react2.default.createElement('button', { className: 'mainPageButton', onClick: this.props.goToMainPage }, ' Main Page '), _react2.default.createElement('button', { className: 'myStoriesButton', onClick: this.props.fetchData }, ' My Stories '))), _react2.default.createElement('div', null, _react2.default.createElement(_StoriesList2.default, { storyData: this.props.storyData, goToMyStoriesPage: this.props.goToMyStoriesPage })));
     }
   }]);
 
@@ -35459,7 +35460,7 @@ function _interopRequireDefault(obj) {
 var StoriesList = function StoriesList(props) {
 
   return _react2.default.createElement('div', { className: 'storiesList' }, props.storyData.map(function (storyObj) {
-    return _react2.default.createElement(_StoriesListEntry2.default, { storyObj: storyObj });
+    return _react2.default.createElement(_StoriesListEntry2.default, { storyObj: storyObj, goToMyStoriesPage: props.goToMyStoriesPage });
   }));
 };
 
@@ -35494,6 +35495,7 @@ var StoriesListEntry = function StoriesListEntry(props) {
 
   var deleteStory = function deleteStory() {
     _axios2.default.put('/delete', props.storyObj);
+    props.goToMyStoriesPage();
   };
 
   return _react2.default.createElement('div', { className: 'storiesListEntry' }, _react2.default.createElement('div', { className: 'storiesListItem' }, _react2.default.createElement('a', { href: '#', className: 'storiesAnchorTag' }, props.storyObj.title)), _react2.default.createElement('button', { className: 'deleteStoriesButton', onClick: deleteStory }, 'Delete Story'));

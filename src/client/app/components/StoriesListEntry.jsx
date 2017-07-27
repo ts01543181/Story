@@ -6,6 +6,7 @@ var StoriesListEntry = (props) => {
 
   var deleteStory = function() {
     axios.put('/delete', props.storyObj);
+    props.goToMyStoriesPage();
   }
 
   return (

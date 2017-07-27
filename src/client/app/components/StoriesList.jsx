@@ -7,7 +7,7 @@ var StoriesList = (props) => {
   return (
     <div className="storiesList">
       {props.storyData.map(storyObj =>
-        <StoriesListEntry storyObj={storyObj}/>
+        <StoriesListEntry storyObj={storyObj} goToMyStoriesPage={props.goToMyStoriesPage}/>
       )}
     </div>
   )

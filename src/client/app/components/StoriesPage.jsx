@@ -24,7 +24,7 @@ class StoriesPage extends React.Component {
           </nav>
         </div>
         <div>
-          <StoriesList storyData={this.props.storyData}/>
+          <StoriesList storyData={this.props.storyData} goToMyStoriesPage={this.props.goToMyStoriesPage}/>
         </div>
       </div>
     )

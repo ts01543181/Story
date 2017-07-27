@@ -90,6 +90,7 @@ class App extends React.Component {
   goToMainPage() {
     this.setState({
       page: 'mainPage',
+      storyLine: [],
     })
   }
 
@@ -113,7 +114,7 @@ class App extends React.Component {
       return (
         <div>
           <div>
-            <Nav searchFunc={this.searchedImages} storyLine={this.state.storyLine} goToMyStoriesPage={this.goToMyStoriesPage} fetchData={this.fetchData}/>
+            <Nav searchFunc={this.searchedImages} storyLine={this.state.storyLine} goToMyStoriesPage={this.goToMyStoriesPage} fetchData={this.fetchData} goToMainPage={this.goToMainPage}/>
           </div>
           <div>
             <Stage stageImage={this.state.stageImage} storyLine={this.state.storyLine} saveImage={this.saveImage}/>
@@ -134,7 +135,7 @@ class App extends React.Component {
       // This is the stories page
       return (
         <div>
-          <StoriesPage goToMainPage={this.goToMainPage} fetchData={this.fetchData} storyData={this.state.storyData}/>
+          <StoriesPage goToMainPage={this.goToMainPage} fetchData={this.fetchData} storyData={this.state.storyData} goToMyStoriesPage={this.goToMyStoriesPage}/>
         </div>
       )
     }

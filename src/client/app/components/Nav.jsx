@@ -29,7 +29,7 @@ var Nav = (props) => {
       <nav>
         <h1 className="header"><span id="theI">S</span><span>tory</span></h1>
         <button className="saveThisStoryButton" onClick={saveThisStory}> Save This Story </button>
-        <button className="mainPageButton"> Main Page </button>
+        <button className="mainPageButton" onClick={props.goToMainPage}> Main Page </button>
         <button className="myStoriesButton" onClick={props.goToMyStoriesPage}> My Stories </button>
       </nav>
     </div>
