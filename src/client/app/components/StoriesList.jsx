@@ -7,7 +7,7 @@ var StoriesList = (props) => {
 
   return (
     <div className="storiesList">
-      {window.storyData.map(storyObj =>
+      {props.storyData.map(storyObj =>
         <div className="storiesListItem">{storyObj.title}</div>
       )}
     </div>

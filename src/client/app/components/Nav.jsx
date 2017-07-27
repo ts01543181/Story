@@ -1,8 +1,18 @@
 import React from 'react';
 import {render} from 'react-dom';
 import Search from './Search.jsx';
+import axios from 'axios';
 
 var Nav = (props) => {
+
+  let postThisStory = function(storyObj) {
+    axios.post('http://127.0.0.1:3000/', storyObj)
+    .then(function() {
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
 
   let saveThisStory = function() {
     let storyTitle = prompt("What do you want to title your story?")
@@ -11,6 +21,7 @@ var Nav = (props) => {
       storyLine: props.storyLine,
     }
     window.storyData.push(storyObj);
+    postThisStory(storyObj)
   }
 
   return (

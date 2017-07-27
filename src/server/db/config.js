@@ -1,8 +1,7 @@
 // create connection to db
-
 const Sequelize = require('sequelize');
 
-const db = new Sequelize('postgres://wsrzrmuq:HLLayzgrWSzH17hJNz-9aH0lW5qRvamZ@stampy.db.elephantsql.com:5432/wsrzrmuq', {
+const db = new Sequelize('postgres://hsixjvur:we9-VpdebenxlMw-Woh6D1_NXTT4DsYw@pellefant.db.elephantsql.com:5432/hsixjvur', {
   dialect: 'postgres',
 });
 

@@ -15,7 +15,8 @@ module.exports = {
   createLists: (req, res) => {
     db.StoriesList.findOrCreate({
       where: {
-        name: req.body.name,
+        title: JSON.stringify(req.body.title),
+        story: JSON.stringify(req.body.storyLine),
       }
     })
       .spread((newList, created) => {
@@ -24,12 +25,12 @@ module.exports = {
           console.log('SUCCESSFULLY CREATED ALL LISTS');
         } else {
           res.status(500).send('LIST ALREADY EXISTS');
-          consoe.log('LIST ALREADY EXISTS');
+          console.log('LIST ALREADY EXISTS');
         }
       })
       .catch(error => {
         res.status(500).send(error);
-        console.log('ERROR IN CREATING LISTS');
+        console.log('ERROR IN CREATING LISTS', error);
       })
   }
 }

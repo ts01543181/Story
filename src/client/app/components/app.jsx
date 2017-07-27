@@ -6,6 +6,7 @@ import StoryLine from './StoryLine.jsx';
 import Stage from './Stage.jsx';
 import Search from './Search.jsx';
 import StoriesPage from './StoriesPage.jsx';
+import axios from 'axios';
 
 class App extends React.Component {
   constructor (props) {
@@ -14,6 +15,7 @@ class App extends React.Component {
     this.state = {
       imageList: window.imageList,
       storyLine: [],
+      storyData: [],
       stageImage: {
         src: 'http://bestanimations.com/Books/pretty-book-bench-nature-water-outdoors-animated-gif.gif',
         caption: 'Write your story. . . Search for images below!'
@@ -28,6 +30,7 @@ class App extends React.Component {
     this.goToMainPage = this.goToMainPage.bind(this);
     this.searchedImages = this.searchedImages.bind(this);
     this.selectedImage = this.selectedImage.bind(this);
+    this.fetchData = this.fetchData.bind(this);
   }
 
   searchedImages(data) {
@@ -78,6 +81,7 @@ class App extends React.Component {
   }
 
   goToMyStoriesPage() {
+    this.fetchData();
     this.setState({
       page: 'storiesPage',
     })
@@ -89,6 +93,19 @@ class App extends React.Component {
     })
   }
 
+  // this is not in the right context because it is being invoked in the .then function
+  fetchData() {
+    axios.get('http://127.0.0.1:3000/getAllStories')
+    .then((response) => {
+      this.setState({
+        storyData: response.data,
+      })
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
+
   render () {
     if (this.state.page === 'mainPage') {
 
@@ -96,7 +113,7 @@ class App extends React.Component {
       return (
         <div>
           <div>
-            <Nav searchFunc={this.searchedImages} storyLine={this.state.storyLine} goToMyStoriesPage={this.goToMyStoriesPage}/>
+            <Nav searchFunc={this.searchedImages} storyLine={this.state.storyLine} goToMyStoriesPage={this.goToMyStoriesPage} fetchData={this.fetchData}/>
           </div>
           <div>
             <Stage stageImage={this.state.stageImage} storyLine={this.state.storyLine} saveImage={this.saveImage}/>
@@ -117,7 +134,7 @@ class App extends React.Component {
       // This is the stories page
       return (
         <div>
-          <StoriesPage goToMainPage={this.goToMainPage}/>
+          <StoriesPage goToMainPage={this.goToMainPage} fetchData={this.fetchData} storyData={this.state.storyData}/>
         </div>
       )
     }
