@@ -203,14 +203,19 @@ img {
   margin-left: 100px;
   margin-right: 100px;
   font-size: 30px;
+  font-family: 'Bellefair';
+  font-weight: 900px;
+  text-decoration: underline;
 }
 
-.presSliderButtonLeft {
-  float: left;
+.presSliderButtonsLeft {
+  font-family: 'Bellefair';
+  font-size: 15px;
 }
 
-.presSliderButtonRight {
-  float: right;
+.presSliderButtonsRight {
+  font-family: 'Bellefair';
+  font-size: 15px;
 }
 
 .presStage {
@@ -221,4 +226,13 @@ img {
 
 .presPic {
   width: 800px;
+}
+
+.presCaption {
+  font-family: 'Bellefair';
+  font-weight: 900px;
+  font-style: italic;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 50px;
 }

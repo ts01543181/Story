@@ -9,6 +9,7 @@ class PresentationPage extends React.Component {
     }
     this.prevPage = this.prevPage.bind(this);
     this.nextPage = this.nextPage.bind(this);
+    this.rightNextPage = this.rightNextPage.bind(this);
     this.props.presStory.story = JSON.parse(this.props.presStory.story);
   }
 
@@ -30,7 +31,12 @@ class PresentationPage extends React.Component {
     }
   }
 
+  rightNextPage(e) {
+    console.log(e.key)
+  }
+
   render() {
+    console.log(this.props.presStory.story[this.state.n])
     return (
       <div>
         <div className="navBar">
@@ -50,6 +56,7 @@ class PresentationPage extends React.Component {
           <div>
             <img className="presPic" src={this.props.presStory.story[this.state.n].src}></img>
           </div>
+          <div><p className="presCaption">{this.props.presStory.story[this.state.n].caption}</p></div>
         </div>
       </div>
     )
