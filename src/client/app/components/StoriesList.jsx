@@ -8,7 +8,12 @@ var StoriesList = (props) => {
   return (
     <div className="storiesList">
       {props.storyData.map(storyObj =>
-        <div className="storiesListItem">{storyObj.title}</div>
+        <div className="storiesListEntry">
+            <div className="storiesListItem">
+              <a href="#" className="storiesAnchorTag">{storyObj.title}</a>
+            </div>
+            <button className="deleteStoriesButton">Delete Story</button>
+        </div>
       )}
     </div>
   )

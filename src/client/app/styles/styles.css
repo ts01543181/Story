@@ -184,4 +184,15 @@ img {
   border-color: white;
   border-radius: 5px;
   width: 600px;
+  text-align: center;
+  display: inline-block;
+}
+
+.deleteStoriesButton {
+  font-family: 'Architects Daughter';
+  font-size: 15px;
+}
+
+.storiesAnchorTag {
+  color: #00bfff;
 }
