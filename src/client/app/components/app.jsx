@@ -22,6 +22,7 @@ class App extends React.Component {
         caption: 'Write your story. . . Search for images below!'
       },
       page: 'mainPage',
+      presStory: {},
     }
     this.deleteImage = this.deleteImage.bind(this);
     this.selectedImage = this.selectedImage.bind(this);
@@ -100,9 +101,10 @@ class App extends React.Component {
     })
   }
 
-  goToPresentationPage() {
+  goToPresentationPage(storyObj) {
     this.setState({
       page: 'presentationPage',
+      presStory: storyObj,
     })
   }
 
@@ -155,7 +157,7 @@ class App extends React.Component {
       // This is the presentation page
       return(
         <div>
-          <PresentationPage goToMainPage={this.goToMainPage} fetchData={this.fetchData} goToMyStoriesPage={this.goToMyStoriesPage}/>
+          <PresentationPage goToMainPage={this.goToMainPage} fetchData={this.fetchData} goToMyStoriesPage={this.goToMyStoriesPage} presStory={this.state.presStory}/>
         </div>
       )
     }

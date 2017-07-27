@@ -12,7 +12,7 @@ var StoriesListEntry = (props) => {
   return (
     <div className="storiesListEntry">
         <div className="storiesListItem">
-          <a href="#" className="storiesAnchorTag" onClick={props.goToPresentationPage}>{props.storyObj.title}</a>
+          <a href="#" className="storiesAnchorTag" onClick={() => {props.goToPresentationPage(props.storyObj)}}>{props.storyObj.title}</a>
         </div>
         <button className="deleteStoriesButton" onClick={deleteStory}>Delete Story</button>
     </div>

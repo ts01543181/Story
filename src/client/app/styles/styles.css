@@ -196,3 +196,29 @@ img {
 .storiesAnchorTag {
   color: #00bfff;
 }
+
+.presStoryTitle {
+  display: inline-block;
+  color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: 30px;
+}
+
+.presSliderButtonLeft {
+  float: left;
+}
+
+.presSliderButtonRight {
+  float: right;
+}
+
+.presStage {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.presPic {
+  width: 800px;
+}

@@ -23241,7 +23241,7 @@ exports = module.exports = __webpack_require__(196)(undefined);
 
 
 // module
-exports.push([module.i, "#body {\n  background-color: #2b2a2a; }\n\n#theI {\n  color: #00bfff;\n  font-size: 100px;\n  margin-right: 10px;\n  font-weight: 900; }\n\n.logo {\n  float: right;\n  display: inline-block;\n  margin-left: 20px; }\n\n.header {\n  font-weight: 900;\n  font-family: 'Architects Daughter';\n  font-size: 75px;\n  margin-top: -10px;\n  margin-left: 3%;\n  margin-right: 10px;\n  margin-bottom: 25px;\n  color: Ivory;\n  max-width: 250px; }\n\n.saveThisStoryButton {\n  float: right;\n  margin-top: -100px;\n  margin-right: 290px;\n  font-family: 'Architects Daughter';\n  font-size: 25px;\n  font-weight: 900;\n  width: 400px;\n  border-radius: 5px;\n  background-color: white; }\n\n.mainPageButton {\n  float: right;\n  margin-top: -100px;\n  margin-right: 730px;\n  font-family: 'Architects Daughter';\n  font-size: 25px;\n  font-weight: 900;\n  width: 200px;\n  border-radius: 5px;\n  background-color: white; }\n\n.myStoriesButton {\n  float: right;\n  margin-top: -100px;\n  margin-right: 50px;\n  font-family: 'Architects Daughter';\n  font-size: 25px;\n  font-weight: 900;\n  width: 200px;\n  border-radius: 5px;\n  background-color: white; }\n\n.searchBar {\n  text-align: center;\n  margin-top: 50px; }\n\n.searchButton {\n  margin-left: 50px;\n  font-family: 'Architects Daughter';\n  font-size: 30px;\n  font-weight: 900; }\n\n.initialText {\n  margin-left: 50px;\n  font-family: 'Architects Daughter';\n  font-size: 50px;\n  font-weight: 900; }\n\n.stage {\n  text-align: center;\n  margin-bottom: 50px; }\n\n.stageImage {\n  width: 650px; }\n\n.stageImageCaptionSet {\n  margin-bottom: 50px;\n  text-align: center; }\n\n.stageImageCaption {\n  font-family: 'Architects Daughter';\n  font-size: 20px;\n  margin-left: 100px;\n  width: 450px; }\n\n.saveCaptionButton {\n  font-family: 'Architects Daughter';\n  font-size: 20px;\n  display: inline-block;\n  margin-left: 30px;\n  border-radius: 10px; }\n\ninput {\n  height: 40px;\n  width: 300px; }\n\n.search {\n  font-size: 20px;\n  border-radius: 5px; }\n\n.storyLine {\n  margin-top: -60px;\n  width: 100%;\n  overflow-x: auto;\n  white-space: nowrap; }\n\n.storyLineEntry {\n  display: inline-block;\n  margin: 60px 40px 40px 40px;\n  vertical-align: middle;\n  box-shadow: 20px 20px 20px black; }\n\n.saveStoryButton {\n  text-align: center; }\n\nimg {\n  box-shadow: 20px 20px 20px black; }\n\n.allImagesContainer {\n  text-align: center; }\n\n.allImages {\n  text-align: center;\n  width: auto;\n  margin-top: 90px; }\n\n.imageEntryBlock {\n  background-color: grey;\n  border-style: solid;\n  display: inline-block; }\n\n.eachImage {\n  height: 300px;\n  width: 300px;\n  margin: 40px 40px 40px 40px;\n  border-style: groove;\n  border-color: gray; }\n\n.removePic {\n  margin-left: 96%; }\n\n.storiesList {\n  text-align: center;\n  font-family: 'Architects Daughter';\n  font-size: 30px;\n  color: white; }\n\n.storiesListItem {\n  margin: 35px 35px 35px 35px;\n  border-style: solid;\n  border-color: white;\n  border-radius: 5px;\n  width: 600px;\n  text-align: center;\n  display: inline-block; }\n\n.deleteStoriesButton {\n  font-family: 'Architects Daughter';\n  font-size: 15px; }\n\n.storiesAnchorTag {\n  color: #00bfff; }\n", ""]);
+exports.push([module.i, "#body {\n  background-color: #2b2a2a; }\n\n#theI {\n  color: #00bfff;\n  font-size: 100px;\n  margin-right: 10px;\n  font-weight: 900; }\n\n.logo {\n  float: right;\n  display: inline-block;\n  margin-left: 20px; }\n\n.header {\n  font-weight: 900;\n  font-family: 'Architects Daughter';\n  font-size: 75px;\n  margin-top: -10px;\n  margin-left: 3%;\n  margin-right: 10px;\n  margin-bottom: 25px;\n  color: Ivory;\n  max-width: 250px; }\n\n.saveThisStoryButton {\n  float: right;\n  margin-top: -100px;\n  margin-right: 290px;\n  font-family: 'Architects Daughter';\n  font-size: 25px;\n  font-weight: 900;\n  width: 400px;\n  border-radius: 5px;\n  background-color: white; }\n\n.mainPageButton {\n  float: right;\n  margin-top: -100px;\n  margin-right: 730px;\n  font-family: 'Architects Daughter';\n  font-size: 25px;\n  font-weight: 900;\n  width: 200px;\n  border-radius: 5px;\n  background-color: white; }\n\n.myStoriesButton {\n  float: right;\n  margin-top: -100px;\n  margin-right: 50px;\n  font-family: 'Architects Daughter';\n  font-size: 25px;\n  font-weight: 900;\n  width: 200px;\n  border-radius: 5px;\n  background-color: white; }\n\n.searchBar {\n  text-align: center;\n  margin-top: 50px; }\n\n.searchButton {\n  margin-left: 50px;\n  font-family: 'Architects Daughter';\n  font-size: 30px;\n  font-weight: 900; }\n\n.initialText {\n  margin-left: 50px;\n  font-family: 'Architects Daughter';\n  font-size: 50px;\n  font-weight: 900; }\n\n.stage {\n  text-align: center;\n  margin-bottom: 50px; }\n\n.stageImage {\n  width: 650px; }\n\n.stageImageCaptionSet {\n  margin-bottom: 50px;\n  text-align: center; }\n\n.stageImageCaption {\n  font-family: 'Architects Daughter';\n  font-size: 20px;\n  margin-left: 100px;\n  width: 450px; }\n\n.saveCaptionButton {\n  font-family: 'Architects Daughter';\n  font-size: 20px;\n  display: inline-block;\n  margin-left: 30px;\n  border-radius: 10px; }\n\ninput {\n  height: 40px;\n  width: 300px; }\n\n.search {\n  font-size: 20px;\n  border-radius: 5px; }\n\n.storyLine {\n  margin-top: -60px;\n  width: 100%;\n  overflow-x: auto;\n  white-space: nowrap; }\n\n.storyLineEntry {\n  display: inline-block;\n  margin: 60px 40px 40px 40px;\n  vertical-align: middle;\n  box-shadow: 20px 20px 20px black; }\n\n.saveStoryButton {\n  text-align: center; }\n\nimg {\n  box-shadow: 20px 20px 20px black; }\n\n.allImagesContainer {\n  text-align: center; }\n\n.allImages {\n  text-align: center;\n  width: auto;\n  margin-top: 90px; }\n\n.imageEntryBlock {\n  background-color: grey;\n  border-style: solid;\n  display: inline-block; }\n\n.eachImage {\n  height: 300px;\n  width: 300px;\n  margin: 40px 40px 40px 40px;\n  border-style: groove;\n  border-color: gray; }\n\n.removePic {\n  margin-left: 96%; }\n\n.storiesList {\n  text-align: center;\n  font-family: 'Architects Daughter';\n  font-size: 30px;\n  color: white; }\n\n.storiesListItem {\n  margin: 35px 35px 35px 35px;\n  border-style: solid;\n  border-color: white;\n  border-radius: 5px;\n  width: 600px;\n  text-align: center;\n  display: inline-block; }\n\n.deleteStoriesButton {\n  font-family: 'Architects Daughter';\n  font-size: 15px; }\n\n.storiesAnchorTag {\n  color: #00bfff; }\n\n.presStoryTitle {\n  display: inline-block;\n  color: white;\n  margin-left: 100px;\n  margin-right: 100px;\n  font-size: 30px; }\n\n.presSliderButtonLeft {\n  float: left; }\n\n.presSliderButtonRight {\n  float: right; }\n\n.presStage {\n  display: inline-block;\n  width: 100%;\n  text-align: center; }\n\n.presPic {\n  width: 800px; }\n", ""]);
 
 // exports
 
@@ -23879,7 +23879,8 @@ var App = function (_React$Component) {
         src: 'http://bestanimations.com/Books/pretty-book-bench-nature-water-outdoors-animated-gif.gif',
         caption: 'Write your story. . . Search for images below!'
       },
-      page: 'mainPage'
+      page: 'mainPage',
+      presStory: {}
     };
     _this.deleteImage = _this.deleteImage.bind(_this);
     _this.selectedImage = _this.selectedImage.bind(_this);
@@ -23968,9 +23969,10 @@ var App = function (_React$Component) {
     }
   }, {
     key: 'goToPresentationPage',
-    value: function goToPresentationPage() {
+    value: function goToPresentationPage(storyObj) {
       this.setState({
-        page: 'presentationPage'
+        page: 'presentationPage',
+        presStory: storyObj
       });
     }
 
@@ -24003,7 +24005,7 @@ var App = function (_React$Component) {
       } else if (this.state.page === 'presentationPage') {
 
         // This is the presentation page
-        return _react2.default.createElement('div', null, _react2.default.createElement(_PresentationPage2.default, { goToMainPage: this.goToMainPage, fetchData: this.fetchData, goToMyStoriesPage: this.goToMyStoriesPage }));
+        return _react2.default.createElement('div', null, _react2.default.createElement(_PresentationPage2.default, { goToMainPage: this.goToMainPage, fetchData: this.fetchData, goToMyStoriesPage: this.goToMyStoriesPage, presStory: this.state.presStory }));
       }
     }
   }]);
@@ -35518,7 +35520,9 @@ var StoriesListEntry = function StoriesListEntry(props) {
     props.goToMyStoriesPage();
   };
 
-  return _react2.default.createElement('div', { className: 'storiesListEntry' }, _react2.default.createElement('div', { className: 'storiesListItem' }, _react2.default.createElement('a', { href: '#', className: 'storiesAnchorTag', onClick: props.goToPresentationPage }, props.storyObj.title)), _react2.default.createElement('button', { className: 'deleteStoriesButton', onClick: deleteStory }, 'Delete Story'));
+  return _react2.default.createElement('div', { className: 'storiesListEntry' }, _react2.default.createElement('div', { className: 'storiesListItem' }, _react2.default.createElement('a', { href: '#', className: 'storiesAnchorTag', onClick: function onClick() {
+      props.goToPresentationPage(props.storyObj);
+    } }, props.storyObj.title)), _react2.default.createElement('button', { className: 'deleteStoriesButton', onClick: deleteStory }, 'Delete Story'));
 };
 
 exports.default = StoriesListEntry;
@@ -35580,14 +35584,39 @@ var PresentationPage = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (PresentationPage.__proto__ || Object.getPrototypeOf(PresentationPage)).call(this, props));
 
-    _this.state = {};
+    _this.state = {
+      n: 0
+    };
+    _this.prevPage = _this.prevPage.bind(_this);
+    _this.nextPage = _this.nextPage.bind(_this);
+    _this.props.presStory.story = JSON.parse(_this.props.presStory.story);
     return _this;
   }
 
   _createClass(PresentationPage, [{
+    key: 'prevPage',
+    value: function prevPage() {
+      if (this.state.n > 0) {
+        var nextIdx = this.state.n - 1;
+        this.setState({
+          n: nextIdx
+        });
+      }
+    }
+  }, {
+    key: 'nextPage',
+    value: function nextPage() {
+      if (this.state.n < this.props.presStory.story.length - 1) {
+        var nextIdx = this.state.n + 1;
+        this.setState({
+          n: nextIdx
+        });
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', null, _react2.default.createElement('div', { className: 'navBar' }, _react2.default.createElement('nav', null, _react2.default.createElement('h1', { className: 'header' }, _react2.default.createElement('span', { id: 'theI' }, 'S'), _react2.default.createElement('span', null, 'tory')), _react2.default.createElement('button', { className: 'saveThisStoryButton' }, ' Save This Story '), _react2.default.createElement('button', { className: 'mainPageButton', onClick: this.props.goToMainPage }, ' Main Page '), _react2.default.createElement('button', { className: 'myStoriesButton', onClick: this.props.fetchData }, ' My Stories '))), _react2.default.createElement('div', null, 'PRESENT'));
+      return _react2.default.createElement('div', null, _react2.default.createElement('div', { className: 'navBar' }, _react2.default.createElement('nav', null, _react2.default.createElement('h1', { className: 'header' }, _react2.default.createElement('span', { id: 'theI' }, 'S'), _react2.default.createElement('span', null, 'tory')), _react2.default.createElement('button', { className: 'saveThisStoryButton' }, ' Save This Story '), _react2.default.createElement('button', { className: 'mainPageButton', onClick: this.props.goToMainPage }, ' Main Page '), _react2.default.createElement('button', { className: 'myStoriesButton', onClick: this.props.goToMyStoriesPage }, ' My Stories '))), _react2.default.createElement('div', { className: 'presStage' }, _react2.default.createElement('div', { className: 'presStoryTitle' }, _react2.default.createElement('button', { className: 'presSliderButtonsLeft', onClick: this.prevPage }, 'Previous Page'), _react2.default.createElement('div', { className: 'presStoryTitle' }, _react2.default.createElement('h2', null, this.props.presStory.title)), _react2.default.createElement('button', { className: 'presSliderButtonsRight', onClick: this.nextPage }, 'Next Page')), _react2.default.createElement('div', null, _react2.default.createElement('img', { className: 'presPic', src: this.props.presStory.story[this.state.n].src }))));
     }
   }]);
 
