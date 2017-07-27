@@ -32,5 +32,19 @@ module.exports = {
         res.status(500).send(error);
         console.log('ERROR IN CREATING LISTS', error);
       })
+  },
+  deleteLists: (req, res) => {
+    console.log('HEEEERE', req.body)
+    db.StoriesList.destroy({
+      where: {
+        title: req.body.title,
+        story: req.body.story,
+      },
+      cascade: true,
+    })
+    .catch(error => {
+      res.status(500).send(error);
+      console.log('ERROR IN DELETING LISTS', error);
+    })
   }
 }

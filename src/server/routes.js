@@ -27,4 +27,7 @@ router.post('/', controller.createLists)
 // GET REQUEST COMING IN FOR GETTING ALL STORIES
 router.get('/getAllStories', controller.fetchLists)
 
+// PUT REQUEST FOR DELETING STORIES
+router.put('/delete', controller.deleteLists)
+
 module.exports = router;
