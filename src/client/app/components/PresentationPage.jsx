@@ -1,5 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
+import $ from 'jquery';
 
 class PresentationPage extends React.Component {
   constructor(props) {
@@ -11,6 +12,20 @@ class PresentationPage extends React.Component {
     this.nextPage = this.nextPage.bind(this);
     this.rightNextPage = this.rightNextPage.bind(this);
     this.props.presStory.story = JSON.parse(this.props.presStory.story);
+  }
+
+  componentDidMount() {
+    console.log('MOUNTING')
+    $(document).keydown((e) => {
+      if(e.which === 39) {
+        this.nextPage();
+      }
+    })
+    $(document).keydown((e) => {
+      if(e.which === 37) {
+        this.prevPage();
+      }
+    })
   }
 
   prevPage() {
@@ -36,7 +51,6 @@ class PresentationPage extends React.Component {
   }
 
   render() {
-    console.log(this.props.presStory.story[this.state.n])
     return (
       <div>
         <div className="navBar">

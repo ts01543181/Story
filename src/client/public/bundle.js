@@ -35554,6 +35554,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(9);
 
+var _jquery = __webpack_require__(222);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -35595,6 +35599,23 @@ var PresentationPage = function (_React$Component) {
   }
 
   _createClass(PresentationPage, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      console.log('MOUNTING');
+      (0, _jquery2.default)(document).keydown(function (e) {
+        if (e.which === 39) {
+          _this2.nextPage();
+        }
+      });
+      (0, _jquery2.default)(document).keydown(function (e) {
+        if (e.which === 37) {
+          _this2.prevPage();
+        }
+      });
+    }
+  }, {
     key: 'prevPage',
     value: function prevPage() {
       if (this.state.n > 0) {
@@ -35622,7 +35643,6 @@ var PresentationPage = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log(this.props.presStory.story[this.state.n]);
       return _react2.default.createElement('div', null, _react2.default.createElement('div', { className: 'navBar' }, _react2.default.createElement('nav', null, _react2.default.createElement('h1', { className: 'header' }, _react2.default.createElement('span', { id: 'theI' }, 'S'), _react2.default.createElement('span', null, 'tory')), _react2.default.createElement('button', { className: 'saveThisStoryButton' }, ' Save This Story '), _react2.default.createElement('button', { className: 'mainPageButton', onClick: this.props.goToMainPage }, ' Main Page '), _react2.default.createElement('button', { className: 'myStoriesButton', onClick: this.props.goToMyStoriesPage }, ' My Stories '))), _react2.default.createElement('div', { className: 'presStage' }, _react2.default.createElement('div', { className: 'presStoryTitle' }, _react2.default.createElement('button', { className: 'presSliderButtonsLeft', onClick: this.prevPage }, 'Previous Page'), _react2.default.createElement('div', { className: 'presStoryTitle' }, _react2.default.createElement('h2', null, this.props.presStory.title)), _react2.default.createElement('button', { className: 'presSliderButtonsRight', onClick: this.nextPage }, 'Next Page')), _react2.default.createElement('div', null, _react2.default.createElement('img', { className: 'presPic', src: this.props.presStory.story[this.state.n].src })), _react2.default.createElement('div', null, _react2.default.createElement('p', { className: 'presCaption' }, this.props.presStory.story[this.state.n].caption))));
     }
   }]);
