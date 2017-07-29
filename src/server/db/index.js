@@ -12,8 +12,8 @@ const StoriesList = db.define('StoriesList', {
     type: Sequelize.TEXT('long'),
     allowNull: false,
   },
-  userID: {
-    type: Sequelize.INTEGER,
+  username: {
+    type: Sequelize.STRING,
     allowNull:false
   }
 })
@@ -28,6 +28,7 @@ const User = db.define('User', {
     allowNull:false
   }
 })
+
 //
 // const Entry = db.define('entry', {
 //   story: {

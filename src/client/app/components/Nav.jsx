@@ -6,12 +6,7 @@ import axios from 'axios';
 var Nav = (props) => {
 
   let postThisStory = function(storyObj) {
-    axios.post('http://127.0.0.1:3000/', storyObj)
-    .then(function() {
-    })
-    .catch((err) => {
-      console.log(err);
-    })
+    axios.post('/', storyObj)
   }
 
   let saveThisStory = function() {
@@ -19,7 +14,9 @@ var Nav = (props) => {
     let storyObj = {
       title: storyTitle,
       storyLine: props.storyLine,
+      username: props.user.username
     }
+    console.log(storyObj)
     window.storyData.push(storyObj);
     postThisStory(storyObj)
   }

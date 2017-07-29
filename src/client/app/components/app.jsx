@@ -110,7 +110,9 @@ class App extends React.Component {
 
   // this is not in the right context because it is being invoked in the .then function
   fetchData() {
-    axios.get('http://127.0.0.1:3000/getAllStories')
+    let username = this.props.location.state.user.username
+
+    axios.get(`/getAllStories/${username}`)
     .then((response) => {
       this.setState({
         storyData: response.data,
@@ -129,7 +131,7 @@ class App extends React.Component {
       return (
         <div>
           <div>
-            <Nav searchFunc={this.searchedImages} storyLine={this.state.storyLine} goToMyStoriesPage={this.goToMyStoriesPage} fetchData={this.fetchData} goToMainPage={this.goToMainPage}/>
+            <Nav searchFunc={this.searchedImages} storyLine={this.state.storyLine} goToMyStoriesPage={this.goToMyStoriesPage} fetchData={this.fetchData} goToMainPage={this.goToMainPage} user={this.props.location.state.user}/>
           </div>
           <div>
             <Stage stageImage={this.state.stageImage} storyLine={this.state.storyLine} saveImage={this.saveImage}/>

@@ -10210,17 +10210,17 @@ function _interopRequireDefault(obj) {
 var Nav = function Nav(props) {
 
   var postThisStory = function postThisStory(storyObj) {
-    _axios2.default.post('http://127.0.0.1:3000/', storyObj).then(function () {}).catch(function (err) {
-      console.log(err);
-    });
+    _axios2.default.post('/', storyObj);
   };
 
   var saveThisStory = function saveThisStory() {
     var storyTitle = prompt("What do you want to title your story?");
     var storyObj = {
       title: storyTitle,
-      storyLine: props.storyLine
+      storyLine: props.storyLine,
+      username: props.user.username
     };
+    console.log(storyObj);
     window.storyData.push(storyObj);
     postThisStory(storyObj);
   };
@@ -34243,7 +34243,9 @@ var App = function (_React$Component) {
     value: function fetchData() {
       var _this2 = this;
 
-      _axios2.default.get('http://127.0.0.1:3000/getAllStories').then(function (response) {
+      var username = this.props.location.state.user.username;
+
+      _axios2.default.get('/getAllStories/' + username).then(function (response) {
         _this2.setState({
           storyData: response.data
         });
@@ -34258,7 +34260,7 @@ var App = function (_React$Component) {
       if (this.state.page === 'mainPage') {
 
         // This is the main page
-        return _react2.default.createElement('div', null, _react2.default.createElement('div', null, _react2.default.createElement(_Nav2.default, { searchFunc: this.searchedImages, storyLine: this.state.storyLine, goToMyStoriesPage: this.goToMyStoriesPage, fetchData: this.fetchData, goToMainPage: this.goToMainPage })), _react2.default.createElement('div', null, _react2.default.createElement(_Stage2.default, { stageImage: this.state.stageImage, storyLine: this.state.storyLine, saveImage: this.saveImage })), _react2.default.createElement('div', { className: 'storyLineBlock' }, _react2.default.createElement(_StoryLine2.default, { storyLine: this.state.storyLine, deleteImage: this.deleteImage, stageImage: this.stageImage, saveImage: this.saveImage })), _react2.default.createElement('div', null, _react2.default.createElement(_Search2.default, { searchFunc: this.searchedImages })), _react2.default.createElement('div', null, _react2.default.createElement(_Images2.default, { images: this.state.imageList, selectImageFunc: this.selectedImage })));
+        return _react2.default.createElement('div', null, _react2.default.createElement('div', null, _react2.default.createElement(_Nav2.default, { searchFunc: this.searchedImages, storyLine: this.state.storyLine, goToMyStoriesPage: this.goToMyStoriesPage, fetchData: this.fetchData, goToMainPage: this.goToMainPage, user: this.props.location.state.user })), _react2.default.createElement('div', null, _react2.default.createElement(_Stage2.default, { stageImage: this.state.stageImage, storyLine: this.state.storyLine, saveImage: this.saveImage })), _react2.default.createElement('div', { className: 'storyLineBlock' }, _react2.default.createElement(_StoryLine2.default, { storyLine: this.state.storyLine, deleteImage: this.deleteImage, stageImage: this.stageImage, saveImage: this.saveImage })), _react2.default.createElement('div', null, _react2.default.createElement(_Search2.default, { searchFunc: this.searchedImages })), _react2.default.createElement('div', null, _react2.default.createElement(_Images2.default, { images: this.state.imageList, selectImageFunc: this.selectedImage })));
       } else if (this.state.page === 'storiesPage') {
 
         // This is the stories page

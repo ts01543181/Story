@@ -2,7 +2,11 @@ const db = require('../db');
 
 module.exports = {
   fetchLists: (req, res) => {
-    db.StoriesList.findAll({})
+    db.StoriesList.findAll({
+      where: {
+        username: req.params.username
+      }
+    })
       .then(data => {
         res.status(200).send(data);
         console.log('SUCCESSFULLY FETCHED ALL LISTS')
@@ -13,10 +17,12 @@ module.exports = {
       })
   },
   createLists: (req, res) => {
+    console.log(req.body)
     db.StoriesList.findOrCreate({
       where: {
         title: JSON.stringify(req.body.title),
         story: JSON.stringify(req.body.storyLine),
+        username: req.body.username
       }
     })
       .spread((newList, created) => {

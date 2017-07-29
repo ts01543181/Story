@@ -25,7 +25,7 @@ router.get('/client/app/config/config.js', (req, res) => {
 router.post('/', controller.createLists)
 
 // GET REQUEST COMING IN FOR GETTING ALL STORIES
-router.get('/getAllStories', controller.fetchLists)
+router.get('/getAllStories/:username', controller.fetchLists)
 
 // PUT REQUEST FOR DELETING STORIES
 router.put('/delete', controller.deleteLists)
