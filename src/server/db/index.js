@@ -12,6 +12,21 @@ const StoriesList = db.define('StoriesList', {
     type: Sequelize.TEXT('long'),
     allowNull: false,
   },
+  userID: {
+    type: Sequelize.INTEGER,
+    allowNull:false
+  }
+})
+
+const User = db.define('User', {
+  username: {
+    type:Sequelize.STRING,
+    allowNull:false
+  },
+  password: {
+    type:Sequelize.TEXT,
+    allowNull:false
+  }
 })
 //
 // const Entry = db.define('entry', {
@@ -27,12 +42,13 @@ const StoriesList = db.define('StoriesList', {
 // StoriesList.hasMany(Entry, { foreignKey: {name: 'list_id', allowNull: false }, onDelete: 'CASCADE' });
 
 // sync up database, which will create the table CREATE TABLE
-StoriesList.sync()
+db.sync()
 // Entry.sync()
 
 // export
 module.exports = {
-  StoriesList: StoriesList,
+  StoriesList,
+  User
   // Entry: Entry,
 }
 

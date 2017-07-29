@@ -45,5 +45,26 @@ module.exports = {
       res.status(500).send(error);
       console.log('ERROR IN DELETING LISTS', error);
     })
+  },
+  createUser: (req, res) => {
+    db.User.findOrCreate({
+      where: {
+        username: req.body.username,
+        password: req.body.password
+      }
+    })
+  },
+  checkCredentials: (req, res) => {
+    db.User.find({
+      where: {
+        username: req.body.username,
+        password: req.body.password
+      }
+    }).then(data => {
+      if (data) {
+        return res.send('success')
+      } 
+      return res.send('fail')
+    })
   }
 }

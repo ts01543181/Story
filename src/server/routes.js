@@ -30,4 +30,8 @@ router.get('/getAllStories', controller.fetchLists)
 // PUT REQUEST FOR DELETING STORIES
 router.put('/delete', controller.deleteLists)
 
+router.post('/signup', controller.createUser)
+
+router.post('/login', controller.checkCredentials)
+
 module.exports = router;

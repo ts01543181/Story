@@ -122,6 +122,7 @@ class App extends React.Component {
   }
 
   render () {
+    console.log(this.props.location.state.user)
     if (this.state.page === 'mainPage') {
 
       // This is the main page
